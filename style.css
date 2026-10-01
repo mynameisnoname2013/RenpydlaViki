@@ -1,0 +1,53 @@
+/* Universal Console Style CSS — Retro Terminal */
+:root {
+    --bg: #0a0e12;
+    --text: #FFC0CB;
+    --prompt: #FFC0CB;
+    --border: #2a3a2a;
+    --link: #FF1493;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+h1, h2, h3 { color: var(--prompt); font-weight: normal; border-left: 3px solid var(--prompt); padding-left: 12px; margin: 1.5em 0 0.5em; }
+h1 { font-size: 1.8em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.3em; }
+
+p, li { margin: 0.5em 0; }
+
+a { color: var(--link); text-decoration: none; border-bottom: 1px dashed var(--link); }
+a:hover { color: #FFC0CB; border-bottom-style: solid; }
+
+code, pre { font-family: 'Courier New', monospace; background: #0c1114; border-radius: 3px; }
+code { padding: 2px 5px; border: 1px solid var(--border); }
+pre { padding: 12px; border-left: 3px solid var(--prompt); overflow-x: auto; margin: 1em 0; }
+
+ul, ol { padding-left: 25px; }
+ul li::marker { color: var(--prompt); content: "> "; }
+
+hr { border: none; height: 1px; background: linear-gradient(90deg, transparent, var(--border), transparent); margin: 20px 0; }
+
+input, textarea, select, button { background: #FFC0CB; border: 1px solid var(--border); color: var(--text); font-family: 'Courier New', monospace; padding: 6px 10px; }
+button:hover { background: #2a3a3a; border-color: var(--prompt); color: var(--prompt); cursor: pointer; }
+
+::selection { background: #2a4c2a; color: #fff; }
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-thumb { background: var(--border); }
+::-webkit-scrollbar-thumb:hover { background: var(--prompt); }
+
+.console-cursor { background: var(--prompt); color: var(--bg); animation: blink 1s step-end infinite; display: inline-block; width: 0.6em; height: 1.2em; }
+@keyframes blink { 50% { opacity: 0; } }
+
+@media (max-width: 768px) { body { padding: 12px; font-size: 12px; } pre { font-size: 11px; padding: 8px; } }
