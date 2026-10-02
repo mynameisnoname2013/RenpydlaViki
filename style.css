@@ -51,3 +51,21 @@ button:hover { background: #2a3a3a; border-color: var(--prompt); color: var(--pr
 @keyframes blink { 50% { opacity: 0; } }
 
 @media (max-width: 768px) { body { padding: 12px; font-size: 12px; } pre { font-size: 11px; padding: 8px; } }
+
+button {
+    background: #FFC0CB;
+    border: 1px solid var(--border);
+    color: #000;
+    font-family: 'Courier New', monospace;
+    padding: 6px 10px;
+    margin: 4px 4px 4px 0;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+button:hover {
+    background: #FF1493;
+    border-color: var(--prompt);
+    color: #000;
+}
