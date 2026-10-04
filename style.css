@@ -38,7 +38,7 @@ ul li::marker { color: var(--prompt); content: "> "; }
 
 hr { border: none; height: 1px; background: linear-gradient(90deg, transparent, var(--border), transparent); margin: 20px 0; }
 
-input, textarea, select, button { background: #FFC0CB; border: 1px solid var(--border); color: var(--text); font-family: 'Courier New', monospace; padding: 6px 10px; }
+input, textarea, select, button { background: #FFC0CB; border: 1px solid var(--border); color: black; font-family: 'Courier New', monospace; padding: 6px 10px; }
 button:hover { background: #2a3a3a; border-color: var(--prompt); color: var(--prompt); cursor: pointer; }
 
 ::selection { background: #2a4c2a; color: #fff; }
